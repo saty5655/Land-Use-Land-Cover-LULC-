@@ -1,8 +1,4 @@
-/*******************************
- Dynamic World LULC (India)
- Dataset: GOOGLE/DYNAMICWORLD/V1
- Author: Mehmood Ahmad (adapted for India)
-********************************/
+
 
 // 1) Region of Interest (ROI) - India boundaries
 var countries = ee.FeatureCollection('USDOS/LSIB_SIMPLE/2017');
@@ -111,15 +107,3 @@ for (var i = 0; i < classNames.length; i++) {
 
 Map.add(legend);
 
-// 10) Export to Google Drive (Optional)
-/*
-Export.image.toDrive({
-  image: classification,
-  description: 'India_DynamicWorld_LULC_2019_2020',
-  folder: 'GEE_Exports',
-  fileNamePrefix: 'India_DW_LULC_2019_2020',
-  scale: 10,
-  region: roi.geometry(),
-  maxPixels: 1e13
-});
-*/
